@@ -10,7 +10,17 @@
   <link rel="stylesheet" href="css/normalize.css" />
   <!-- Подключаем стили -->
   <link rel="stylesheet" href="css/style.css" />
-  <script src="js/main.js" defer ></script>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js" defer ></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+     <script src="https://www.gstatic.com/firebasejs/8.2.8/firebase-auth.js" defer ></script>
+     <script src="https://www.gstatic.com/firebasejs/8.2.8/firebase-database.js" defer ></script>
+
+  <script src="js/main.js" defer></script>
 </head>
 
 <body>
@@ -202,6 +212,25 @@
         <!-- /.post-footer -->
       </section>
     </main>
+
+    <form action="#" class="add-post">
+      <input type="text" name="title" class="add-title" placeholder="Заголовок поста">
+      <textarea name="text" class="add-text" placeholder="Текст вашего поста"></textarea>
+      <input type="text" name="tags" class="add-tags" placeholder="Добавьте теги через запятую">
+
+      <div class="add-buttons">
+        <button type="submit" class="button add-button">
+          <svg class="icon icon-fire">
+            <use xlink:href="img/icons.svg#fire"></use>
+          </svg>
+          Опубликовать пост
+        </button>
+
+      </div>
+    </form>
+
+
+
     <!-- /.posts -->
     <aside class="sidebar">
       <div class="login">
@@ -240,11 +269,12 @@
           <h2 class="edit-title">Редактироовать</h2>
 
           <label class="edit-label"> Ваш логин
-            <input type="text" class="edit-input edit-username" name="username" minlength="3" placeholder=" логин " required>
+            <input type="text" class="edit-input edit-username" name="username" minlength="3" placeholder=" логин "
+              required>
           </label>
 
           <label class="edit-label"> ваше фото
-            <input type="text" class="edit-input edit-photo" name="photo"  placeholder="URL-photo">
+            <input type="text" class="edit-input edit-photo" name="photo" placeholder="URL-photo">
           </label>
 
           <button class="edit-btn">Сохранить</button>
